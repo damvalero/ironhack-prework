@@ -1,0 +1,199 @@
+/*este margin y padding cero coloca como una hoja estandar*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Roboto;
+    color: white;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: Roboto Condensed;
+    color: white;
+}
+.heading-space{
+    margin: 20px 0;
+}
+
+nav {
+    background-color: #C12127;
+    color: rgba(255,255,255,0.8);
+    padding-top: 15px;
+    height: 50px;
+}
+nav a{
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+}
+.top-links{
+    display: inline-block;
+    float: right;
+    padding: 0;
+    margin: 0 20px 0 0;
+    vertical-align: middle;
+}
+.top-links li{
+    display: inline-block;
+    margin: 0 10px;
+    
+}
+
+/* header */
+.header{
+    background-color: rgb(32, 101, 136);
+    height: 400px;
+
+}
+.header-img{
+    background-image: url('../starter-code/images/city-scape.svg');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(32, 101, 136);
+}
+.bar-link{
+    display: inline-block;
+    float: right;
+
+}
+.bar-link li{
+    display: inline-block;
+    margin: 0 5px;
+}
+.sign-link{
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+}
+.header-cont2{
+    width: 450px;
+    margin: 0 260px;
+}
+.link-btn{
+    background-color: rgb(240, 146, 51);
+    font-family: Roboto Condensed;
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 120px;
+    text-align: center;
+    border: none;
+    border-radius: 30px;
+    margin: 20px 0 0 0;
+}
+.search-bar{
+    background-color:  rgb(31, 82, 111);
+    height:25px;
+    width: 70%;
+    margin: 10px;
+    /*display: inline-block;
+    weight: 100%; */
+}
+.img-npm{
+    margin: 10px;
+    width: 5%;
+}
+.sign-bear{
+    width: 50%;
+}
+
+
+/*Section 1 ORG */
+.img-org{
+    width: 40%;
+    margin: 50px 0 50px 200px;
+}
+.org-back{ /*this is the background of the section ORG*/
+    background-color: rgb(39, 53, 71);
+    color: white;
+    height: 430px;
+}
+.div-org{
+    width: 300px;;
+    float: right;
+    margin: 70px 200px 0 0;
+}
+.org-btn{
+    background-color: rgb(203, 56, 55);
+    font-family: Roboto Condensed;
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 120px;
+    text-align: center;
+    border: none;
+    border-radius: 30px;
+    margin: 20px 5px 0 5px;
+}
+
+
+/* Section 2 what is npm*/
+#what-npm{
+    height: 350px;
+    position: relative;
+}
+.backg-img{
+    background-image: url(../starter-code/images/forklift.svg);
+    background-size: cover;
+}
+.div-what{
+    position: absolute;
+    left: 200px;
+    top: 70px;
+    width: 300px;
+}
+.install-btn{
+    background-color: rgb(49, 68, 88);
+    font-family: Roboto Condensed;
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 120px;
+    text-align: center;
+    border: none;
+    border-radius: 30px;
+    margin: 20px 0;
+}
+
+/*section3 building blocks*/
+#building-block{
+    background-color: white;
+    height: 300px;
+}
+.div-tittle{
+    margin: 30px auto 0 auto;
+}
+.div-options{
+    margin: 10px 0 10px 20%;
+
+}
+.heading-3{
+    color: rgb(83, 88, 98);
+    text-align: center;
+}
+.text-p{
+    text-align: center;
+    margin: 10px 0;
+}
+.text-content{
+    color: rgb(135, 145, 156);
+}
+.link-s3{
+    color: rgb(208, 74, 73);
+    text-decoration: none;
+}
+.col{
+    float: left;
+}
+.col-3{
+    width: 30%;
+}
+.clearfix{/*this is to clear the floats */
+    clear: both;
+}
+.service-box{
+    text-align: center;
+    padding: 10px;
+    width: 220px;
+    padding: 20px;
+}
