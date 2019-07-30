@@ -17,10 +17,12 @@ h1, h2, h3, h4, h5{
 }
 
 nav {
+    display: flex;
+    justify-content: space-between;
     background-color: #C12127;
     color: rgba(255,255,255,0.8);
     padding-top: 15px;
-    height: 50px;
+    height: 35px;
 }
 nav a{
     color: rgba(255,255,255,0.8);
@@ -43,7 +45,6 @@ nav a{
 .header{
     background-color: rgb(32, 101, 136);
     height: 400px;
-
 }
 .header-img{
     background-image: url('../starter-code/images/city-scape.svg');
@@ -52,11 +53,18 @@ nav a{
     background-size: cover;
     background-color: rgb(32, 101, 136);
 }
+.header-container{
+    display: flex;
+    flex-direction: row;
+}
+.sign-box, .bar-link{
+    display: flex;
+    align-items: center;
+}
+/* is not necessary, create errors with the flex up there.
 .bar-link{
     display: inline-block;
-    float: right;
-
-}
+}    */
 .bar-link li{
     display: inline-block;
     margin: 0 5px;
@@ -64,6 +72,7 @@ nav a{
 .sign-link{
     color: rgba(255,255,255,0.8);
     text-decoration: none;
+    width: 110px;
 }
 .header-cont2{
     width: 450px;
@@ -84,7 +93,7 @@ nav a{
 .search-bar{
     background-color:  rgb(31, 82, 111);
     height:25px;
-    width: 70%;
+    width: 74%;
     margin: 10px;
     /*display: inline-block;
     weight: 100%; */
