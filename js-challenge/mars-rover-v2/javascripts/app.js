@@ -1,12 +1,12 @@
 // Rover Object Goes Here
-rover ={
+var rover ={
   direction= 'N',// north default direction
   x= 0,//horizontal position 
   y= 0,//vertical position
   travelLog= [],
 }
 // ======================
-var grid = [
+/*var grid = [
   ['R',null,null,null,null,null,null,null,null,null],
   [null,null,null,null,null,null,null,null,null,null],
   [null,null,null,null,null,null,null,null,null,null],
@@ -17,7 +17,7 @@ var grid = [
   [null,null,null,null,null,null,null,null,null,null],
   [null,null,null,null,null,null,null,null,null,null],
   [null,null,null,null,null,null,null,null,null,null],
-];
+];*/
 // ======================
 function turnLeft(rover){
   switch(rover.direction){
@@ -90,9 +90,29 @@ function moveForward(rover){
   console.log('Rover is in the position: ' + [rover.x,rover.y]);
 }
 
-function commands (){
-
+function commands(route){
+  if (route.indexOf('l')>=0 || route.indexOf('r')>=0 || route.indexOf('f')>=0){
+    for (var i=0; i<route.length; i++){
+      switch(route[i]){
+        case 'l':
+          turnLeft(rover);
+          break;
+        case 'r':
+          turnRight(rover);
+          break;
+        case 'f':
+          moveForward(rover);
+          break;    
+      }    
+    }
+    var position= [rover.x,rover.y];
+    rover.travelLog.push(position);
+    console.log('Rover position is: ' + position);
+  }else{
+    console.log('Enter valid caracters: l(left), r(right) or f(forward)');
+  }
 }
 
-
+const route = 'rffrfflfrff';
+console.log(commands(route));// to call the function
 
