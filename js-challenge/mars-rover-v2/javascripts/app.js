@@ -56,7 +56,7 @@ function turnRight(rover){
 }
 
 function moveForward(rover){
-  switch{
+  switch(rover.direction){
     case 'N':
       if(rover.y<0 || rover.y>9){
         console.log('Is reached the limit space to move');
@@ -71,7 +71,6 @@ function moveForward(rover){
         rover.x+=1;//x=x+1
       }
       break;
-      }
     case 'S':
       if (rover.y<0 || rover.y>10){
         console.log('Is reached the limit space to move');
@@ -79,21 +78,21 @@ function moveForward(rover){
         rover.y+=1;
       }
       break;
-      }
     case 'W':
       if (rover.x<0 || rover.x>9){
         console.log('Is reached the limit space to move');
       }else{
         rover.x-=1;
       }
-      break;
-      }  
+      break;  
   }
   console.log("moveForward was called");
   console.log('Rover is in the position: ' + [rover.x,rover.y]);
 }
 
-function commands
+function commands (){
+
+}
 
 
 
