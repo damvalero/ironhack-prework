@@ -1,9 +1,9 @@
 // Rover Object Goes Here
 var rover ={
-  direction= 'N',// north default direction
-  x= 0,//horizontal position 
-  y= 0,//vertical position
-  travelLog= [],
+  direction: 'N',// north default direction
+  x: 0,//horizontal position 
+  y: 0,//vertical position
+  travelLog: [],
 }
 // ======================
 /*var grid = [
@@ -58,28 +58,28 @@ function turnRight(rover){
 function moveForward(rover){
   switch(rover.direction){
     case 'N':
-      if(rover.y<0 || rover.y>9){
+      if(rover.y<=0){
         console.log('Is reached the limit space to move');
       }else{
         rover.y-=1;//y=y-1
       }
       break;
     case 'E':
-      if (rover.x<0 || rover.x>9){
+      if (rover.x>=10){
         console.log('Is reached the limit space to move');
       }else{
         rover.x+=1;//x=x+1
       }
       break;
     case 'S':
-      if (rover.y<0 || rover.y>10){
+      if (rover.y>=10){
         console.log('Is reached the limit space to move');
       }else{
         rover.y+=1;
       }
       break;
     case 'W':
-      if (rover.x<0 || rover.x>9){
+      if (rover.x<=0){
         console.log('Is reached the limit space to move');
       }else{
         rover.x-=1;
@@ -92,7 +92,7 @@ function moveForward(rover){
 
 function commands(route){
   if (route.indexOf('l')>=0 || route.indexOf('r')>=0 || route.indexOf('f')>=0){
-    for (var i=0; i<route.length; i++){
+    for (let i=0; i<route.length; i++){
       switch(route[i]){
         case 'l':
           turnLeft(rover);
@@ -105,14 +105,14 @@ function commands(route){
           break;    
       }    
     }
-    var position= [rover.x,rover.y];
+    let position= [rover.x,rover.y];
     rover.travelLog.push(position);
-    console.log('Rover position is: ' + position);
+    console.log('Rover final position is: ' + position);
   }else{
     console.log('Enter valid caracters: l(left), r(right) or f(forward)');
   }
 }
 
-const route = 'rffrfflfrff';
-console.log(commands(route));// to call the function
+const route = 'rrfffffffffflfffffffffflfffffrllfzzzhhh';
+commands(route);// to call the function
 
