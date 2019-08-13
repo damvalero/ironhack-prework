@@ -148,17 +148,18 @@ function commands(route){
           break;
         case 'b':
           moveBackward(rover);
-          break;      
+          break; 
+        default:
+            console.log('Enter valid caracters: l(left), r(right), f(forward) or b(backward)');
+
       }    
     }
     let position= [rover.x,rover.y];
     rover.travelLog.push(position);
     console.log('Rover final position is: ' + position);
-  }else{
-    console.log('Enter valid caracters: l(left), r(right), f(forward) or b(backward)');
   }
 }
 
-const route = 'llffffbbrfbbbbbbbbbbbggg' //'rrfffffffffflfffffffffflfffffrllfbb';
+const route = 'llffffbbrfbbbbbbbbbbbggg'; //'rrfffffffffflfffffffffflfffffrllfbb';
 commands(route);// to call the function
 
